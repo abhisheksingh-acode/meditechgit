@@ -17,3 +17,10 @@ const slider2 = new Swiper(".slider-container", {
     prevEl: ".slider-button-prev",
   },
 });
+
+$(document).ready(function () {
+  $(".tab").click(function () {
+    $(".active-tab").removeClass("active-tab");
+    $(this).addClass("active-tab");
+  });
+});
