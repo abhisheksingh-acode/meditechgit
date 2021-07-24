@@ -1057,7 +1057,7 @@ footer {
 }
 
 footer .footer-row {
-  padding: 10px 0;
+  padding: 10px 0 40px;
   border-bottom: 1px solid white;
 }
 
@@ -1121,7 +1121,8 @@ footer .left-col .contact .number {
 footer .left-col .contact .note {
   font-size: 14px;
   font-weight: 400;
-  color: #eeebeb;
+  padding: 5px;
+  color: white;
 }
 
 footer .right-col {
