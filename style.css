@@ -1031,4 +1031,173 @@ a {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+
+footer {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 70px 50px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  background: rgba(65, 156, 216, 0) url("/footerbg.jpg") no-repeat center center;
+  background-size: 130%;
+  background-blend-mode: multiply;
+}
+
+footer .footer-row {
+  padding: 10px 0;
+  border-bottom: 1px solid white;
+}
+
+footer .left-col .logo {
+  width: 100%;
+  height: 100px;
+}
+
+footer .left-col .logo img {
+  display: inline-block;
+  min-width: 100px;
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  background: rgba(121, 120, 120, 0);
+}
+
+footer .left-col .description {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+  font-size: 15px;
+}
+
+footer .left-col .menu {
+  width: 100%;
+}
+
+footer .left-col .menu ul li {
+  text-transform: capitalize;
+  font-weight: lighter;
+}
+
+footer .left-col .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: 19px;
+}
+
+footer .left-col .contact .fas {
+  font-size: 38px;
+  padding-right: 20px;
+}
+
+footer .left-col .contact .number {
+  font-weight: bold;
+  font-size: 23px;
+  letter-spacing: 1px;
+}
+
+footer .left-col .contact .note {
+  font-size: 14px;
+  font-weight: 400;
+  color: #eeebeb;
+}
+
+footer .right-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .right-col .map {
+  width: 100%;
+  height: 70%;
+  background: #b3b3b3;
+  border-radius: 10px;
+}
+
+footer .right-col .address .col-6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .right-col .address .col-6 .fas {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 12px;
+  color: #05d46d;
+  background: white;
+  border-radius: 50%;
+}
+
+footer .right-col .address .col-6 .title {
+  font-size: 13px;
+  color: white;
+}
+
+footer .right-col .address .col-6 .location {
+  font-size: 14px;
+  font-weight: normal;
+  color: white;
+}
+
+footer .right-col .address .col-6 .mail {
+  font-size: 15px;
+  font-weight: normal;
+  color: white;
+}
+
+footer .footer-icon-container i {
+  width: 40px;
+  height: 40px;
+  color: #00984a;
+  background: white;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=style.css.map */

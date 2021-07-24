@@ -785,3 +785,124 @@ a {
     }
   }
 }
+footer {
+  width: 100%;
+  height: fit-content;
+  padding: 70px 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background: rgba(65, 156, 216, 0) url("/footerbg.jpg") no-repeat center center;
+  background-size: 130%;
+  background-blend-mode: multiply;
+  .footer-row {
+    padding: 10px 0;
+    border-bottom: 1px solid white;
+  }
+  .left-col {
+    .logo {
+      width: 100%;
+      height: 100px;
+      img {
+        display: inline-block;
+        min-width: 100px;
+        width: auto;
+        height: auto;
+        max-height: 100%;
+        background: rgba(121, 120, 120, 0);
+      }
+    }
+    .description {
+      width: 100%;
+      height: fit-content;
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+      // font-weight: 400;
+    }
+    .menu {
+      width: 100%;
+      ul {
+        li {
+          text-transform: capitalize;
+          font-weight: lighter;
+        }
+      }
+    }
+    .contact {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: white;
+      font-size: 19px;
+      .fas {
+        font-size: 38px;
+        padding-right: 20px;
+      }
+      .number {
+        font-weight: bold;
+        font-size: 23px;
+        letter-spacing: 1px;
+      }
+      .note {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgb(238, 235, 235);
+      }
+    }
+  }
+  .right-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .map {
+      width: 100%;
+      height: 70%;
+      background: rgb(179, 179, 179);
+      border-radius: 10px;
+    }
+    .address {
+      .col-6 {
+        display: flex;
+
+        .fas {
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 10px 12px;
+          color: rgb(5, 212, 109);
+          background: white;
+          border-radius: 50%;
+        }
+        .title {
+          font-size: 13px;
+          color: rgb(255, 255, 255);
+        }
+        .location {
+          font-size: 14px;
+          font-weight: normal;
+          color: white;
+        }
+        .mail {
+          font-size: 15px;
+          font-weight: normal;
+          color: white;
+        }
+      }
+    }
+  }
+  .footer-icon-container {
+    i {
+      width: 40px;
+      height: 40px;
+      color: $theme-dark;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
