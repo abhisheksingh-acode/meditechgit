@@ -3,6 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+}
 
 $theme-dark: rgb(0, 152, 74);
 $theme-light: rgb(87, 211, 147);
@@ -380,17 +384,36 @@ a {
 // popular test
 
 .popular-test-section {
-  background: $theme-x-light;
   padding: 60px 60px;
-  .swiper-container {
+  position: relative;
+
+  .slide-button-next,
+  .slide-button-prev {
+    position: absolute;
+    display: inline-block;
+    width: fit-content;
+    background: $theme-light;
+    top: 50%;
+    font-size: 29px;
+    padding: 0 5px;
+    z-index: 3;
+  }
+  .slide-button-next {
+    right: 30px;
+  }
+  .slide-button-prev {
+    left: 30px;
+  }
+  .slide-container {
+    margin: 0 auto;
     width: 100%;
     min-height: 300px;
     padding: 30px 40px;
-    position: relative;
-    z-index: 1;
+    overflow: hidden;
     .swiper-wrapper {
       display: flex;
       align-items: center;
+      margin: auto;
     }
     .swiper-slide {
       min-height: 280px;
@@ -407,7 +430,7 @@ a {
         justify-content: space-around;
         position: relative;
         overflow: hidden;
-        box-shadow: -2px 2px 3px rgba(167, 161, 161, 0.137);
+        box-shadow: 0px 2px 3px rgba(167, 161, 161, 0.26);
 
         .top {
           display: flex;
@@ -462,6 +485,303 @@ a {
           color: white;
         }
       }
+    }
+  }
+}
+
+.truehealth-section {
+  padding: 60px 60px;
+  position: relative;
+  background: $theme-x-light;
+
+  .slider-button-next,
+  .slider-button-prev {
+    position: absolute;
+    display: inline-block;
+    width: fit-content;
+    background: $theme-light;
+    top: 50%;
+    font-size: 29px;
+    padding: 0 5px;
+    z-index: 3;
+  }
+  .slider-button-next {
+    right: 25px;
+  }
+  .slider-button-prev {
+    left: 25px;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: fit-content;
+    padding: 5px 0;
+    .card {
+      width: 260px;
+      height: 480px;
+      box-shadow: -1px 1px 6px rgba(73, 71, 71, 0.185);
+      // filter: drop-shadow();
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+
+      .img-box {
+        width: 100%;
+        height: 180px;
+        background: gainsboro;
+      }
+      .content-div {
+        width: 100%;
+        padding: 0 15px;
+        height: calc(100% - 180px);
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .price {
+          // border: 2px solid;
+          background: rgb(12, 106, 194);
+          padding: 5px;
+          color: white;
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+          font-size: 18px;
+          font-weight: 500;
+          transform: translate(-101px, -15px);
+          box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.274);
+        }
+        .title {
+          font-weight: bold;
+          font-size: 19px;
+          color: rgb(68, 65, 65);
+        }
+        .test-nos {
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          .icon {
+            i {
+              padding: 10px 15px 10px 0;
+              font-size: 28px;
+              color: $theme-light;
+            }
+          }
+          .content {
+            .title {
+              font-weight: normal;
+              font-size: 14px;
+              color: rgba(63, 60, 60, 0.774);
+            }
+            .nos {
+              font-weight: normal;
+              font-size: 14.5px;
+              color: rgb(15, 14, 14);
+            }
+          }
+        }
+
+        .age-group {
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          .icon {
+            i {
+              padding: 10px 15px 10px 0;
+              font-size: 28px;
+              color: $theme-light;
+            }
+          }
+          .title-box {
+            .title {
+              font-weight: normal;
+              font-size: 14px;
+              color: rgba(63, 60, 60, 0.774);
+            }
+            .desc {
+              font-weight: normal;
+              font-size: 14.5px;
+              color: rgb(31, 29, 29);
+            }
+          }
+        }
+        .link {
+          border: 1px solid $theme-dark;
+          color: $theme-dark;
+          transition: all 0.2s ease;
+        }
+        .link:hover {
+          border: 1px solid transparent;
+          background: $theme-light;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.get-tested-section {
+  width: 100%;
+  height: fit-content;
+  padding: 50px 10px;
+
+  .row {
+    .link {
+      font-size: 12px;
+      padding: 10px 30px;
+      background: $theme-dark;
+      color: #fff;
+      font-weight: 500;
+      border-radius: 4px;
+    }
+    .circle {
+      .inner-div {
+        width: 300px;
+        height: 300px;
+        // border: 10px solid $theme-light;
+        border-radius: 50%;
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h4 {
+          color: $theme-dark;
+          text-align: center;
+        }
+        span {
+          font-size: 14px;
+          padding: 10px;
+        }
+        span:nth-child(3) {
+          width: 5px;
+          height: 5px;
+          padding: 0;
+          border-radius: 50%;
+          background-color: $theme-light;
+        }
+      }
+    }
+    .floats-div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-start;
+      width: 300px;
+      height: fit-content;
+      padding: 20px;
+
+      .icon {
+        i {
+          color: $theme-light;
+          background: #fff;
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.479);
+          padding: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          margin: 10px;
+        }
+      }
+      .title {
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .description {
+        font-size: 14px;
+        color: rgb(66, 64, 64);
+        text-align: center;
+      }
+    }
+    .left-floats {
+      .floats-div {
+        margin-left: auto;
+        text-align: right;
+      }
+      .float1 {
+        transform: translateX(30%);
+      }
+      .float2 {
+        transform: translateX(10%);
+      }
+      .float3 {
+        transform: translateX(30%);
+      }
+      // .float2,
+      // .float4 {
+      //   transform: translateY(30%);
+      // }
+    }
+    .right-floats {
+      .floats-div {
+        margin-right: auto;
+        text-align: left;
+      }
+      .float4 {
+        transform: translateX(-30%);
+      }
+      .float5 {
+        transform: translateX(-10%);
+      }
+      .float6 {
+        transform: translateX(-30%);
+      }
+    }
+  }
+}
+
+.more-question-about {
+  width: 100%;
+  height: fit-content;
+  padding: 60px;
+
+  .tabs-container {
+    padding: 20px 10px;
+
+    .tab {
+      border-left: 5px solid rgb(207, 198, 198);
+      padding: 10px;
+      margin: 0;
+      overflow: hidden;
+
+      .title {
+        font-size: 14px;
+        font-weight: 500;
+        color: #000;
+        text-transform: capitalize;
+      }
+      .desc {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgb(56, 54, 54);
+      }
+    }
+    .active-tab {
+      border-left: 5px solid $theme-dark;
+    }
+  }
+}
+
+.faq-section {
+  width: 100%;
+  height: fit-content;
+  padding: 60px;
+  margin: 20px auto;
+
+  .accordion-container {
+    box-shadow: -1px 4px 10px $theme-x-light;
+
+    .accordion-button:not(.collapsed) {
+      background: $theme-x-light;
+      color: #000;
+    }
+    .collapsed {
+      color: $theme-dark;
+    }
+    .accordion-button:focus {
+      box-shadow: none;
     }
   }
 }
