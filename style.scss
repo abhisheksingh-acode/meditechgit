@@ -3,10 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
-  max-width: 1280px;
-  margin: 0 auto;
-}
 
 $theme-dark: rgb(0, 152, 74);
 $theme-light: rgb(87, 211, 147);
@@ -793,7 +789,8 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: end;
-  background: rgba(65, 156, 216, 0) url("footerbg.jpg") no-repeat center center;
+  background: rgba(16, 110, 58, 0.205) url("footerbg.jpg") no-repeat center
+    center;
   background-size: 130%;
   background-blend-mode: multiply;
   .footer-row {
@@ -803,13 +800,13 @@ footer {
   .left-col {
     .logo {
       width: 100%;
-      height: 100px;
+      height: fit-content;
       img {
         display: inline-block;
         min-width: 100px;
         width: auto;
         height: auto;
-        max-height: 100%;
+        max-height: 100px;
         background: rgba(121, 120, 120, 0);
       }
     }
