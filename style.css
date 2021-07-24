@@ -1051,7 +1051,7 @@ footer {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  background: rgba(65, 156, 216, 0) url("/footerbg.jpg") no-repeat center center;
+  background: rgba(65, 156, 216, 0) url("footerbg.jpg") no-repeat center center;
   background-size: 130%;
   background-blend-mode: multiply;
 }
