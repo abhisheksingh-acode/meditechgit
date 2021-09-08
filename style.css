@@ -450,7 +450,7 @@ a {
   height: 300px;
   margin-top: 30px;
   border: 20px solid white;
-  background: url("./image/doctor-holding-injection-vaccine-YZ6V9RA.jpg") no-repeat;
+  background: url("/image/doctor-holding-injection-vaccine-YZ6V9RA.jpg") no-repeat;
   background-size: cover;
   border-radius: 50%;
 }
