@@ -19,21 +19,35 @@
    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="">
 
    <!-- navbar -->
-   <div class="top-navbar d-flex justify-content-around bg-theme-light">
+   <div class="top-navbar d-flex justify-content-between bg-theme-dark m-0">
       <!-- top navstrip -->
       <!-- social icons -->
-      <ul>
-         <li><i class="fab fa-facebook"></i></li>
-         <li><i class="fab fa-twitter"></i></li>
+      <ul class="m-0 me-md-3 ">
+         <a href="/">
+            <div class="brand-logo">
+               <img src="" alt="" class="img-fluid">
+            </div>
+         </a>
+         <li class="ms-5">
+            <form class="d-flex">
+               <input class="form-control me-2 border-0 rounded-1" type="text"
+                  placeholder="Search for Tests, Health Checkups" aria-label="Search" id="search">
+               <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+            </form>
+         </li>
+      </ul>
+      <!-- <ul class="pe-5 me-5"> -->
+
+      <!-- <li><i class="fab fa-twitter"></i></li>
          <li><i class="fab fa-youtube"></i></li>
          <li><i class="fas fa-rss"></i></li>
          <li><i class="fab fa-reddit"></i></li>
          <li><i class="fab fa-tumblr"></i></li>
-         <li><i class="fab fa-flickr"></i></li>
-      </ul>
+         <li><i class="fab fa-flickr"></i></li> -->
+      <!-- </ul> -->
       <!-- address tele -->
       <ul>
          <li class="border-right pe-3"><i class="fas fa-map-marker-alt"></i> 9873 Ridgeward,IL 504843</li>
@@ -42,52 +56,52 @@
    </div>
 
    <!-- header -->
-   <header class="">
+   <header class="mx-auto p-0">
       <!-- menu in header  -->
-      <div class="bottom-navbar d-flex justify-content-around align-items-center">
-         <ul class="me-3 p-0">
-            <a href="/">
-               <div class="brand-logo">
-                  <img src="" alt="" class="img-fluid">
-               </div>
-            </a>
-         </ul>
-         <ul class="navbar-menu">
-            <li class="active">Home <i class="fas fa-chevron-down"></i></li>
-            <li>About</li>
-            <li>Services <i class="fas fa-chevron-down"></i></li>
-            <li>Pages <i class="fas fa-chevron-down"></i></li>
-            <li>News <i class="fas fa-chevron-down"></i></li>
-            <li>Contact</li>
-         </ul>
+      <div class="bottom-navbar d-flex justify-content-between justify-content-md-evenly align-items-center">
+         <ul class="navbar-menu w-100 d-flex justify-content-between justify-content-md-evenly align-items-center">
 
-         <ul>
+            <!-- <i class="fas fa-chevron-down"></i> -->
+
+            <li class="active">Home </li>
+            <li>About</li>
+            <li>COVID-19 </li>
+            <li>Truhealth Checkups </li>
+            <li>Upload Prescription </li>
+            <li>Book A Home Visit</li>
+            <li>Sample Tracking </li>
+            <li>Download Report </li>
+            <li><a href="#" class="btn sign-btn d-flex align-items-center"><i class="far fa-user p-2"></i>
+                  Login</a>
+            </li>
+         </ul>
+         <!-- <ul>
             <form action="">
                <input type="hidden" class="form-control">
                <i class="fas fa-search text-theme-dark"></i>
             </form>
-            <li><button class="btn bg-theme-dark text-white sign-btn">SIGN IN</button></li>
-         </ul>
-
+         </ul> -->
+         <!-- <ul class="toggle">
+            <i class="fas fa-bars fa-2x"></i>
+         </ul> -->
       </div>
 
-      <div class="row mx-auto">
-         <div class="col-md-5 ps-5 p-0 pt-5">
+      <div class="row mx-auto gy-2">
+         <div class="col-md-5 mx-auto col-12 ps-md-5 p-md-0 pt-md-5">
             <div class="ms-auto mt-1" style="width: fit-content;">
-               <h1 class="text-theme-dark pb-1">Protected Together</h1>
+               <h1 class="text-theme-dark pb-1 fw-bold">Protected Together</h1>
                <p>Lorem ipsum dolor sit amet, consectetur adipisicing <br>
                   elit. Ut perferendis quibusdam fuga sunt quasi <br>
                   quia suscipit vel, dignissimos, qui deleniti odio <br> cumque illo. Unde ex</p>
 
                <small class="text-muted d-block mb-2">Emergeny Hotline 24/7</small>
-               <button class="btn border-success text-theme-dark px-4"><i class="fas fa-phone px-2"></i>
+               <button class="btn border-success text-theme-dark px-md-4"><i class="fas fa-phone px-md-2"></i>
                   +1-747-5739-58</button>
-               <button class="btn bg-theme-dark text-white px-5">Contact Us</button>
+               <button class="btn bg-theme-dark text-white px-md-5">Contact Us</button>
             </div>
-
-            <div class="form-container ms-auto w-100 p-5 pe-0">
-               <form action="" class="ms-5 p-4 landing-form">
-                  <h5>Sign Up To On-line Consultation</h5>
+            <div class="form-container ms-md-auto p-md-5 pe-md-0 mt-md-0 mt-4">
+               <form action="" class="ms-md-5 landing-form">
+                  <h5 class="form-title">Sign Up To On-line Consultation</h5>
 
                   <div class="mb-2">
                      <label for="name">Name</label>
@@ -101,20 +115,46 @@
                      <label for="phone">Phone Number</label>
                      <input type="text" name="phone" class="form-control" placeholder="Phone Number (Optional)">
                   </div>
-                  <div class="mb-2">
-                     <small class="">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nesciunt harum quisquam
-                     </small>
+                  <div class="mb-2 form-check">
+                     <input id="check" type="checkbox" class="form-check-input">
+                     <label for="check" class="form-check-label">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     </label>
                   </div>
-                  <button type="submit" class="btn bg-theme-dark text-white w-100">Book An Appointment</button>
+                  <div class="mb-2 form-check">
+                     <input id="check" type="checkbox" class="form-check-input">
+                     <label for="check" class="form-check-label">
+                        Lorem ipsum dolor sit amet consectetur
+                     </label>
+                  </div>
+                  <button type="submit" class="btn bg-theme-dark text-white w-100 mt-3">Book An Appointment</button>
                </form>
             </div>
 
          </div>
-         <div class="col-md-7 row px-0 mx-0">
+         <div class="col-md-7 col-12 row px-0 mx-0">
             <div class="col-12 h-75 d-flex header-second-column">
-
-               <div class="shape1"></div>
+               <div class="shape1">
+                  <div class="swiper-container home-slider">
+                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                           <img
+                              src="./image/dental-nurse-prepare-professional-medical-tools-at-stomatology-laboratory-SBI-300904583.jpg"
+                              alt="">
+                        </div>
+                        <div class="swiper-slide">
+                           <img src="./image/embryologist-using-microscope-in-laboratory_SFaZfBl0Hi-SBI-301027649.jpg"
+                              alt="">
+                        </div>
+                        <div class="swiper-slide">
+                           <img
+                              src="./image/female-medical-doctor-using-microscope-in-a-laboratory_BYLl85sC4s-SBI-300984829.jpg"
+                              alt="">
+                        </div>
+                     </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>
                <div class="shape2">
                   <div class="shape3"></div>
                </div>
@@ -123,8 +163,6 @@
             <div class="col-12"></div>
          </div>
       </div>
-
-
 
    </header>
 
@@ -166,7 +204,7 @@
    <section class="covid-test-section">
       <div class="fix-bg">
          <div class="container mx-auto">
-            <h2 class="heading">Covid Test</h2>
+            <h2 class="heading main-heading">Covid Test</h2>
             <p class="para">
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi culpa et ipsum maxime eius, nihil vero
                excepturi vel delectus similique nulla, animi saepe explicabo quo incidunt eligendi enim eveniet. Fugiat.
@@ -274,10 +312,10 @@
 
    <!-- popular tests  -->
 
-   <section class="popular-test-section">
+   <section class="popular-test-section ">
 
       <div class="w-75 mx-auto">
-         <h3 class="text-center">Popular Test</h3>
+         <h3 class="text-center main-heading">Popular Test</h3>
          <p class="text-center text-muted">Browse through our most popular tests that ensure your good health</p>
       </div>
 
@@ -394,8 +432,7 @@
             </div>
 
          </div>
-
-
+         <div class="swiper-pagination"></div>
       </div>
       <div class="slide-button-next">
          <i class="fas fa-chevron-right"></i>
@@ -408,10 +445,10 @@
 
    <!-- truehealth checkups  -->
 
-   <section class="truehealth-section">
+   <section class="truehealth-section ">
 
       <div class="w-75 mx-auto">
-         <h3 class="text-center">TrueHealth Check-ups</h3>
+         <h3 class="text-center main-heading">TrueHealth Check-ups</h3>
          <p class="text-center text-muted">
             Introducing TruHealth, Expert and comprehensive inner health wellness </p>
       </div>
@@ -422,11 +459,102 @@
             <div class="swiper-slide">
                <div class="card">
                   <div class="img-box">
-                     <img src="" alt="">
+                     <img src="./image/group-of-happy-kids-PVRWSMN.jpg" alt="" class="img-fluid">
                   </div>
                   <div class="content-div">
                      <span class="price">₹1234</span>
-                     <span class="title">Lorem, ipsum dolor. Lorem, ipsum.</span>
+                     <span class="title">TruHealth Advanced</span>
+
+                     <span class="test-nos">
+                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
+                        <span class="content">
+                           <span class="title">Tests Included </span> <br>
+                           <span class="nos">15</span></span>
+                     </span>
+                     <div class="age-group">
+                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
+                        <span class="title-box">
+                           <span class="title">Ideal For</span> <br>
+                           <span class="desc">
+                              Male/Female between 21/30 Years
+                           </span>
+                        </span>
+                     </div>
+                     <div>
+                        <a href="" class="link btn">Book Now</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="swiper-slide">
+               <div class="card">
+                  <div class="img-box">
+                     <img src="./image/group-of-young-people-Z52VD6E.jpg" alt="" class="img-fluid">
+                  </div>
+                  <div class="content-div">
+                     <span class="price">₹1234</span>
+                     <span class="title">TruHealth Youth</span>
+
+                     <span class="test-nos">
+                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
+                        <span class="content">
+                           <span class="title">Tests Included </span> <br>
+                           <span class="nos">15</span></span>
+                     </span>
+                     <div class="age-group">
+                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
+                        <span class="title-box">
+                           <span class="title">Ideal For</span> <br>
+                           <span class="desc">
+                              Male/Female between 21/30 Years
+                           </span>
+                        </span>
+                     </div>
+                     <div>
+                        <a href="" class="link btn">Book Now</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="swiper-slide">
+               <div class="card">
+                  <div class="img-box">
+                     <img src="./image/group-of-young-people-Z52VD6E.jpg" alt="" class="img-fluid">
+                  </div>
+                  <div class="content-div">
+                     <span class="price">₹1234</span>
+                     <span class="title">TruHealth Master</span>
+
+                     <span class="test-nos">
+                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
+                        <span class="content">
+                           <span class="title">Tests Included </span> <br>
+                           <span class="nos">15</span></span>
+                     </span>
+                     <div class="age-group">
+                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
+                        <span class="title-box">
+                           <span class="title">Ideal For</span> <br>
+                           <span class="desc">
+                              Male/Female between 21/30 Years
+                           </span>
+                        </span>
+                     </div>
+                     <div>
+                        <a href="" class="link btn">Book Now</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="swiper-slide">
+               <div class="card">
+                  <div class="img-box">
+                     <img src="./image/group-of-old-people-eating-and-drinking-outdoor-U5EHSGR.jpg" alt=""
+                        class="img-fluid">
+                  </div>
+                  <div class="content-div">
+                     <span class="price">₹1234</span>
+                     <span class="title">TruHealth Senior</span>
 
                      <span class="test-nos">
                         <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
@@ -456,7 +584,7 @@
                   </div>
                   <div class="content-div">
                      <span class="price">₹1234</span>
-                     <span class="title">Lorem, ipsum dolor. Lorem, ipsum.</span>
+                     <span class="title">TrueHealth SmartWoman</span>
 
                      <span class="test-nos">
                         <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
@@ -479,255 +607,14 @@
                   </div>
                </div>
             </div>
-            <div class="swiper-slide">
-               <div class="card">
-                  <div class="img-box">
-                     <img src="" alt="">
-                  </div>
-                  <div class="content-div">
-                     <span class="price">₹1234</span>
-                     <span class="title">Lorem, ipsum dolor. Lorem, ipsum.</span>
-
-                     <span class="test-nos">
-                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
-                        <span class="content">
-                           <span class="title">Tests Included </span> <br>
-                           <span class="nos">15</span></span>
-                     </span>
-                     <div class="age-group">
-                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
-                        <span class="title-box">
-                           <span class="title">Ideal For</span> <br>
-                           <span class="desc">
-                              Male/Female between 21/30 Years
-                           </span>
-                        </span>
-                     </div>
-                     <div>
-                        <a href="" class="link btn">Book Now</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="swiper-slide">
-               <div class="card">
-                  <div class="img-box">
-                     <img src="" alt="">
-                  </div>
-                  <div class="content-div">
-                     <span class="price">₹1234</span>
-                     <span class="title">Lorem, ipsum dolor. Lorem, ipsum.</span>
-
-                     <span class="test-nos">
-                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
-                        <span class="content">
-                           <span class="title">Tests Included </span> <br>
-                           <span class="nos">15</span></span>
-                     </span>
-                     <div class="age-group">
-                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
-                        <span class="title-box">
-                           <span class="title">Ideal For</span> <br>
-                           <span class="desc">
-                              Male/Female between 21/30 Years
-                           </span>
-                        </span>
-                     </div>
-                     <div>
-                        <a href="" class="link btn">Book Now</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="swiper-slide">
-               <div class="card">
-                  <div class="img-box">
-                     <img src="" alt="">
-                  </div>
-                  <div class="content-div">
-                     <span class="price">₹1234</span>
-                     <span class="title">Lorem, ipsum dolor. Lorem, ipsum.</span>
-
-                     <span class="test-nos">
-                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
-                        <span class="content">
-                           <span class="title">Tests Included </span> <br>
-                           <span class="nos">15</span></span>
-                     </span>
-                     <div class="age-group">
-                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
-                        <span class="title-box">
-                           <span class="title">Ideal For</span> <br>
-                           <span class="desc">
-                              Male/Female between 21/30 Years
-                           </span>
-                        </span>
-                     </div>
-                     <div>
-                        <a href="" class="link btn">Book Now</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="swiper-slide">
-               <div class="card">
-                  <div class="img-box">
-                     <img src="" alt="">
-                  </div>
-                  <div class="content-div">
-                     <span class="price">₹1234</span>
-                     <span class="title">Lorem, ipsum dolor. Lorem, ipsum.</span>
-
-                     <span class="test-nos">
-                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
-                        <span class="content">
-                           <span class="title">Tests Included </span> <br>
-                           <span class="nos">15</span></span>
-                     </span>
-                     <div class="age-group">
-                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
-                        <span class="title-box">
-                           <span class="title">Ideal For</span> <br>
-                           <span class="desc">
-                              Male/Female between 21/30 Years
-                           </span>
-                        </span>
-                     </div>
-                     <div>
-                        <a href="" class="link btn">Book Now</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="swiper-slide">
-               <div class="card">
-                  <div class="img-box">
-                     <img src="" alt="">
-                  </div>
-                  <div class="content-div">
-                     <span class="price">₹1234</span>
-                     <span class="title">Lorem, ipsum dolor. Lorem, ipsum.</span>
-
-                     <span class="test-nos">
-                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
-                        <span class="content">
-                           <span class="title">Tests Included </span> <br>
-                           <span class="nos">15</span></span>
-                     </span>
-                     <div class="age-group">
-                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
-                        <span class="title-box">
-                           <span class="title">Ideal For</span> <br>
-                           <span class="desc">
-                              Male/Female between 21/30 Years
-                           </span>
-                        </span>
-                     </div>
-                     <div>
-                        <a href="" class="link btn">Book Now</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="swiper-slide">
-               <div class="card">
-                  <div class="img-box">
-                     <img src="" alt="">
-                  </div>
-                  <div class="content-div">
-                     <span class="price">₹1234</span>
-                     <span class="title">Lorem, ipsum dolor. Lorem, ipsum.</span>
-
-                     <span class="test-nos">
-                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
-                        <span class="content">
-                           <span class="title">Tests Included </span> <br>
-                           <span class="nos">15</span></span>
-                     </span>
-                     <div class="age-group">
-                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
-                        <span class="title-box">
-                           <span class="title">Ideal For</span> <br>
-                           <span class="desc">
-                              Male/Female between 21/30 Years
-                           </span>
-                        </span>
-                     </div>
-                     <div>
-                        <a href="" class="link btn">Book Now</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="swiper-slide">
-               <div class="card">
-                  <div class="img-box">
-                     <img src="" alt="">
-                  </div>
-                  <div class="content-div">
-                     <span class="price">₹1234</span>
-                     <span class="title">Lorem, ipsum dolor. Lorem, ipsum.</span>
-
-                     <span class="test-nos">
-                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
-                        <span class="content">
-                           <span class="title">Tests Included </span> <br>
-                           <span class="nos">15</span></span>
-                     </span>
-                     <div class="age-group">
-                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
-                        <span class="title-box">
-                           <span class="title">Ideal For</span> <br>
-                           <span class="desc">
-                              Male/Female between 21/30 Years
-                           </span>
-                        </span>
-                     </div>
-                     <div>
-                        <a href="" class="link btn">Book Now</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="swiper-slide">
-               <div class="card">
-                  <div class="img-box">
-                     <img src="" alt="">
-                  </div>
-                  <div class="content-div">
-                     <span class="price">₹1234</span>
-                     <span class="title">Lorem, ipsum dolor. Lorem, ipsum.</span>
-
-                     <span class="test-nos">
-                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
-                        <span class="content">
-                           <span class="title">Tests Included </span> <br>
-                           <span class="nos">15</span></span>
-                     </span>
-                     <div class="age-group">
-                        <span class="icon"><i class="fas fa-thermometer-three-quarters"></i></span>
-                        <span class="title-box">
-                           <span class="title">Ideal For</span> <br>
-                           <span class="desc">
-                              Male/Female between 21/30 Years
-                           </span>
-                        </span>
-                     </div>
-                     <div>
-                        <a href="" class="link btn">Book Now</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
          </div>
-
+         <div class="swiper-pagination"></div>
 
       </div>
-      <div class="slider-button-next border">
+      <div class="slider-button-next ">
          <i class="fas fa-chevron-right"></i>
       </div>
-      <div class="slider-button-prev border">
+      <div class="slider-button-prev ">
          <i class="fas fa-chevron-left"></i>
       </div>
    </section>
@@ -735,9 +622,9 @@
 
    <!-- how to get tested for  -->
 
-   <section class="get-tested-section mt-5">
+   <section class="get-tested-section mt-5 ">
       <div class="w-75 mx-auto">
-         <h3 class="text-center ">How to get tested for <br>Coronavirus?</h3>
+         <h3 class="text-center main-heading">How to get tested for <br>Coronavirus?</h3>
          <p class="text-center text-muted w-75 mx-auto">
             IIf you have symptoms of COVID-19 or have been exposed to people who have symptoms or have tested positive,
             you may want to get tested.
@@ -827,24 +714,69 @@
    </section>
 
 
+
+
+   <!-- mobile application section  -->
+
+   <section class="mx-auto mobile-app-section bg-theme-x-light py-5">
+      <div class="row container-md mx-auto">
+         <div class="col-6 d-flex align-items-center justify-content-center">
+            <!-- <div class="img-container"> -->
+            <img src="./image/app.JPG" alt="" height="500px" width="auto">
+            <!-- </div> -->
+         </div>
+         <div class="col-6 d-flex align-items-center flex-column justify-content-center">
+            <div class="">
+               <h2 class="main-heading">Work Better Together. Schedule
+                  Meetings In An Instant.</h2>
+               <p class=" text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ad necessitatibus
+                  labore
+                  architecto.</p>
+               <p class="text-left">Available for download on the Google Play Store and
+                  App Store.</p>
+               <br>
+               <form action="" method="post">
+                  <div class="input-group mb-3 pe-5">
+                     <input type="text" class="form-control" placeholder="Enter email to recieve download link"
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                     <button class="btn btn-success" type="submit" id="button-addon2">Send</button>
+                  </div>
+               </form>
+               <div class="d-flex justify-content-center align-items-center">
+                  <a href=""><img src="/image/swync-download-android-ios.png" alt="" width="auto" height="60px"></a>
+                  <!-- <a href=""><img src="/image/appstore.png" alt="" width="auto" height="50px"></a> -->
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </section>
+
+
+
+
+
+
+
+
    <!-- answer to more questions section  -->
-   <section class="more-question-about mx-auto">
+   <section class="more-question-about mx-auto ">
       <div class="row container p-0 mx-auto justify-content-center">
          <div class="col-md-4 p-0">
-            <h4>Answers To More Question About:</h4>
+            <h4 class="main-heading">Why Meditech Diagnostic:</h4>
             <p class="">
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dicta culpa excepturi a voluptatem beatae
             </p>
 
             <div class="tabs-container">
-               <div class="tab">
+               <div class="tab active-tab">
                   <span class="title">title tab 1</span>
                   <p class="desc">
                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat sint cumque obcaecati
                      veritatis quis error
                   </p>
                </div>
-               <div class="tab active-tab">
+               <div class="tab ">
                   <span class="title">title tab 1</span>
                   <p class="desc">
                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat sint cumque obcaecati
@@ -860,17 +792,139 @@
                </div>
             </div>
          </div>
-         <div class="col-md-5 bg-theme-light rounded-3">
+         <div class="col-md-5  rounded-3">
+            <div class="tab-container active">
+               <img src="./image/scientists-working-at-the-laboratory-SBI-300818371.jpg" alt="">
+            </div>
+            <div class="tab-container">
+               <img src="./image/screenshot-www.google.com-2021.09.07-23_09_03.png" alt="">
+            </div>
+            <div class="tab-container ">
+               <img
+                  src="./image/graphicstock-two-clinicians-discussing-medical-document-in-laboratory_rSMAeT5sgW-SBI-304633876.jpg"
+                  alt="">
+            </div>
          </div>
       </div>
 
 
    </section>
 
+
+
+   <!-- video section  -->
+   <section class="mx-auto py-5 video-section">
+      <h2 class="main-heading text-center">Meditech Videos</h2>
+
+      <div class="swiper-container swiper-video container mx-auto">
+         <div class="swiper-wrapper">
+            <div class="swiper-slide">
+               <iframe width="100%" height="auto" src="https://www.youtube.com/embed/PLhbRulwNVo"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide">
+               <iframe width="100%" height="auto" src="https://www.youtube.com/embed/PLhbRulwNVo"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide">
+               <iframe width="100%" height="auto" src="https://www.youtube.com/embed/PLhbRulwNVo"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide">
+               <iframe width="100%" height="auto" src="https://www.youtube.com/embed/PLhbRulwNVo"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+            </div>
+         </div>
+         <div class="swiper-pagination"></div>
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+      </div>
+   </section>
+
+   <!-- blogs article  -->
+
+   <section class="mx-auto blogs">
+      <h2 class="text-center main-heading">Latest Article Blogs</h2>
+      <div class="swiper-blogs container mx-auto py-4">
+         <div class="swiper-wrapper">
+            <div class="swiper-slide">
+               <div class="card" style="">
+                  <img src="./image/group-of-old-people-eating-and-drinking-outdoor-U5EHSGR.jpg" class="card-img-top"
+                     alt="...">
+                  <div class="card-body">
+                     <p class="card-text small text-success">Some quick example text to build on the card title and make
+                        up
+                        the bulk of the
+                        card's content.</p>
+                     <p class="card-text small">Some quick example text to build on the card title and make up the bulk
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="swiper-slide">
+               <div class="card" style="">
+                  <img src="./image/group-of-old-people-eating-and-drinking-outdoor-U5EHSGR.jpg" class="card-img-top"
+                     alt="...">
+                  <div class="card-body">
+                     <p class="card-text small text-success">Some quick example text to build on the card title and make
+                     </p>
+                     <p class="card-text small">Some quick example text to build on the card title and make up the bulk
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="swiper-slide">
+               <div class="card" style="">
+                  <img src="./image/group-of-old-people-eating-and-drinking-outdoor-U5EHSGR.jpg" class="card-img-top"
+                     alt="...">
+                  <div class="card-body">
+                     <p class="card-text small text-success">Some quick example text to build on the card title and make
+                        up
+                        the bulk of the
+                        card's content.</p>
+                     <p class="card-text small">Some quick example text to build on the card title and make up the bulk
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="swiper-slide">
+               <div class="card" style="">
+                  <img src="./image/group-of-old-people-eating-and-drinking-outdoor-U5EHSGR.jpg" class="card-img-top"
+                     alt="...">
+                  <div class="card-body">
+                     <p class="card-text small text-success">Some quick example text to build on the card title and make
+                        up
+                        the bulk of the
+                        card's content.</p>
+                     <p class="card-text small">Some quick example text to build on the card title and make up the bulk
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+         </div>
+      </div>
+   </section>
+
+
+
+
+
+
    <!-- faqs  -->
-   <section class="faq-section">
+   <section class="faq-section ">
       <div class="w-75 mx-auto mb-5">
-         <h3 class="text-center ">Q&As on Covid-19 and related health topics</h3>
+         <h3 class="text-center main-heading">Q&As on Covid-19 and related health topics</h3>
          <p class="text-center text-muted w-75 mx-auto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magni quos, eaque officia eum iusto ipsum!
          </p>

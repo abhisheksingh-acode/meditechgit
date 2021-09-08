@@ -9,6 +9,14 @@ $theme-light: rgb(87, 211, 147);
 $theme-x-light: rgb(221, 252, 236);
 $theme-white: rgb(255, 255, 255);
 
+@font-face {
+  font-family: "poppins";
+  src: url("/fonts/Poppins/Poppins-Light.ttf");
+}
+body {
+  font-family: "poppins";
+}
+
 .bg-theme-dark {
   background: $theme-dark;
 }
@@ -40,8 +48,24 @@ a {
 }
 .top-navbar {
   //   background: $theme-dark;
-  padding: 4px;
+  padding: 8px 4px;
   height: fit-content;
+
+  .brand-logo {
+    width: 80px;
+    height: 40px;
+    // border-radius: 50%;
+    background: $theme-x-light;
+  }
+
+  #search {
+    width: 300px;
+  }
+  #search::placeholder {
+    font-family: "poppins";
+    font-weight: lighter;
+    font-size: 12px;
+  }
 
   ul {
     list-style: none;
@@ -65,26 +89,36 @@ a {
   background: transparent;
   padding: 4px;
   height: fit-content;
-  width: 80%;
-  margin: 20px auto 0;
+  border-bottom: 0.5px solid rgba(56, 56, 56, 0.267);
+  // width: 80%;
+  margin: 0 auto 10px;
 
-  .brand-logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: $theme-x-light;
-  }
+  // .brand-logo {
+  //   width: 80px;
+  //   height: 80px;
+  //   border-radius: 50%;
+  //   background: $theme-x-light;
+  // }
   .navbar-menu {
-    li {
-      font-size: 14px;
-      font-weight: 500;
-      color: rgb(90, 88, 88);
+    margin: 0;
+    li,
+    a {
+      font-size: 12px;
+      font-weight: bold;
+      color: rgb(43, 42, 42);
+      letter-spacing: 0.75px;
+      padding: 2px;
+      cursor: pointer;
+      transition: all 0.2s ease;
 
       i {
-        color: rgb(90, 88, 88);
-        font-size: 12px;
+        color: rgb(53, 52, 52);
+        // font-size: 12px;
         transform: translate(2px, 1px);
       }
+    }
+    li:hover {
+      text-decoration: underline;
     }
     .active {
       color: $theme-dark;
@@ -105,7 +139,7 @@ a {
       box-shadow: 2px 2px 6px #3a39399f;
     }
     .sign-btn {
-      font-size: 14px;
+      font-size: 12px;
       width: 150px;
       // padding: 5px 20px !important;
     }
@@ -115,6 +149,12 @@ a {
 .landing-form {
   border-radius: 15px;
   box-shadow: -1px 2px 6px rgba(128, 128, 128, 0.493);
+  padding: 40px 30px;
+
+  .form-title {
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
   input {
     border-radius: 7px;
   }
@@ -129,6 +169,10 @@ a {
     padding: 2px 10px;
   }
 }
+.main-heading {
+  font-weight: bolder;
+  // text-align: center;
+}
 
 .header-second-column {
   overflow: hidden;
@@ -142,6 +186,18 @@ a {
     border-top-left-radius: 20%;
     background: $theme-x-light;
     //  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+    .swiper-container {
+      width: 100% !important;
+      height: 100% !important;
+
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 
   .shape2 {
@@ -228,6 +284,7 @@ a {
   }
   .heading {
     text-align: center;
+    font-weight: bold;
   }
   .para {
     width: 50%;
@@ -287,7 +344,9 @@ a {
       height: 300px;
       margin-top: 30px;
       border: 20px solid rgb(255, 255, 255);
-      background: $theme-light;
+      background: url("./image/doctor-holding-injection-vaccine-YZ6V9RA.jpg")
+        no-repeat;
+      background-size: cover;
       border-radius: 50%;
     }
   }
@@ -382,13 +441,15 @@ a {
 .popular-test-section {
   padding: 60px 60px;
   position: relative;
+  overflow: hidden;
 
   .slide-button-next,
   .slide-button-prev {
     position: absolute;
     display: inline-block;
     width: fit-content;
-    background: $theme-light;
+    // background: $theme-light;
+    // color: #3a39399f;
     top: 50%;
     font-size: 29px;
     padding: 0 5px;
@@ -467,7 +528,7 @@ a {
           .description {
             font-size: 14px;
             color: rgb(66, 64, 64);
-            text-align: justify;
+            text-align: left;
           }
         }
         .link {
@@ -495,7 +556,8 @@ a {
     position: absolute;
     display: inline-block;
     width: fit-content;
-    background: $theme-light;
+    // background: $theme-light;
+    border: none;
     top: 50%;
     font-size: 29px;
     padding: 0 5px;
@@ -511,6 +573,7 @@ a {
   .swiper-container {
     width: 100%;
     height: fit-content;
+    overflow: hidden;
     padding: 5px 0;
     .card {
       width: 260px;
@@ -525,6 +588,12 @@ a {
         width: 100%;
         height: 180px;
         background: gainsboro;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+          width: auto;
+        }
       }
       .content-div {
         width: 100%;
@@ -758,6 +827,40 @@ a {
       border-left: 5px solid $theme-dark;
     }
   }
+  .tab-container {
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    // display: none;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  .tab-container:not(.active) {
+    display: none;
+  }
+}
+
+.video-section {
+  .swiper-video {
+    overflow: hidden;
+    padding: 20px;
+    iframe {
+      width: 100%;
+      min-height: 240px;
+      height: auto;
+    }
+  }
+}
+
+.swiper-blogs {
+  overflow: hidden;
+
+  .card {
+    height: 340px;
+  }
 }
 
 .faq-section {
@@ -901,6 +1004,145 @@ footer {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .top-navbar {
+    display: none !important;
+  }
+  .bottom-navbar {
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px 20px;
+    .sign-btn {
+      display: none;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        margin: 0;
+        padding: 0;
+      }
+      .fa-search {
+        display: none;
+      }
+    }
+  }
+  .toggle {
+    display: block;
+    // position: fixed;
+    // top: 0;
+    // right: 10px;
+    // z-index: 3;
+  }
+  .navbar-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    border: 2px solid;
+    background: $theme-dark;
+    z-index: 4;
+    transform: translateX(-150%);
+    li {
+      font-size: 16px;
+      font-weight: 500;
+      color: rgb(255, 255, 255);
+
+      i {
+        color: rgb(255, 255, 255);
+        font-size: 12px;
+        transform: translate(2px, 1px);
+      }
+    }
+    .active {
+      color: $theme-dark;
+    }
+  }
+
+  .quick-cards {
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    .quick-card {
+      margin: 30px 10px;
+    }
+  }
+
+  .covid-test-section {
+    .fix-bg {
+      padding: 60px 10px;
+    }
+    .para {
+      width: 100%;
+      word-break: break-all;
+    }
+
+    .floats-div {
+      width: 100px;
+      .icon {
+        i {
+        }
+      }
+      .title {
+        font-size: 12px;
+        text-align: center;
+      }
+      .description {
+        font-size: 12px;
+      }
+    }
+    .float1,
+    .float2 {
+      transform: translateX(0);
+    }
+    .float3,
+    .float4 {
+      transform: translateX(0);
+    }
+    .float2,
+    .float4 {
+      transform: translateY(10%);
+    }
+
+    .circle {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      div {
+        width: 200px;
+        height: 200px;
+        margin-top: 80px;
+        border: 15px solid rgb(255, 255, 255);
+      }
+    }
+
+    .book-card-container {
+      justify-content: start;
+      overflow-x: scroll;
+      transform: translateY(-14%);
+      .book-card {
+        .card-item {
+          .top {
+            padding: 0 10px;
+            .nos {
+              font-size: 24px;
+            }
+            .title {
+              font-size: 13px;
+            }
+          }
+          .link {
+            padding: 5px 10px;
+            border-radius: 5px;
+          }
+        }
+      }
+
+      .book-card:hover {
+        transform: scale(1.09);
+      }
     }
   }
 }
