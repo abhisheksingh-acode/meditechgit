@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: "poppins";
-  src: url("/fonts/Poppins/Poppins-Light.ttf");
+  src: url("fonts/Poppins/Poppins-Light.ttf");
 }
 
 body {
@@ -245,13 +245,13 @@ a {
   background: #ddfcec;
 }
 
-.header-second-column .shape1 .swiper-container {
+.header-second-column .shape1 .home-slider {
   width: 100% !important;
   height: 100% !important;
   overflow: hidden;
 }
 
-.header-second-column .shape1 .swiper-container img {
+.header-second-column .shape1 .home-slider img {
   width: 100%;
   height: 100%;
 }
@@ -353,7 +353,7 @@ a {
 
 .covid-test-section .fix-bg {
   padding: 60px 40px;
-  background: #ddfcec url("/bg-img.jpg") no-repeat;
+  background: #ddfcec url("bg-img.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -450,7 +450,7 @@ a {
   height: 300px;
   margin-top: 30px;
   border: 20px solid white;
-  background: url("/image/doctor-holding-injection-vaccine-YZ6V9RA.jpg") no-repeat;
+  background: url("image/doctor-holding-injection-vaccine-YZ6V9RA.jpg") no-repeat;
   background-size: cover;
   border-radius: 50%;
 }

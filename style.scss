@@ -11,7 +11,7 @@ $theme-white: rgb(255, 255, 255);
 
 @font-face {
   font-family: "poppins";
-  src: url("/fonts/Poppins/Poppins-Light.ttf");
+  src: url("fonts/Poppins/Poppins-Light.ttf");
 }
 body {
   font-family: "poppins";
@@ -187,7 +187,7 @@ a {
     background: $theme-x-light;
     //  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 
-    .swiper-container {
+    .home-slider {
       width: 100% !important;
       height: 100% !important;
 
@@ -279,7 +279,7 @@ a {
 .covid-test-section {
   .fix-bg {
     padding: 60px 40px;
-    background: $theme-x-light url("/bg-img.jpg") no-repeat;
+    background: $theme-x-light url("bg-img.jpg") no-repeat;
     background-size: cover;
   }
   .heading {
@@ -344,7 +344,7 @@ a {
       height: 300px;
       margin-top: 30px;
       border: 20px solid rgb(255, 255, 255);
-      background: url("/image/doctor-holding-injection-vaccine-YZ6V9RA.jpg")
+      background: url("image/doctor-holding-injection-vaccine-YZ6V9RA.jpg")
         no-repeat;
       background-size: cover;
       border-radius: 50%;
