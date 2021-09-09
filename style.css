@@ -244,12 +244,14 @@ a {
 }
 
 .header-second-column .shape1 {
-  width: 40%;
+  width: 400px;
   height: 130%;
-  -webkit-transform: translate(128%, -10%) skew(-25deg, 10deg) scaleX(1.7);
-          transform: translate(128%, -10%) skew(-25deg, 10deg) scaleX(1.7);
+  -webkit-transform: translate(58%, -9%) scaleX(1.7);
+          transform: translate(58%, -9%) scaleX(1.7);
   border-top-left-radius: 20%;
   background: #ddfcec;
+  -webkit-clip-path: polygon(31% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(31% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .header-second-column .shape1 .home-slider {
@@ -264,13 +266,13 @@ a {
 }
 
 .header-second-column .shape2 {
-  width: 200px;
+  width: 237px;
   height: 100%;
   overflow: hidden;
   border-top-left-radius: 7%;
   background: #00984a;
-  -webkit-transform: translate(-124%, 4%) skew(-25deg, 2deg);
-          transform: translate(-124%, 4%) skew(-25deg, 2deg);
+  -webkit-transform: translate(-224%, 0%) skew(-14deg, 0deg);
+          transform: translate(-224%, 0%) skew(-14deg, 0deg);
 }
 
 .header-second-column .shape3 {
@@ -283,12 +285,12 @@ a {
 }
 
 .header-second-column .shape4 {
-  width: 250px;
+  width: 242px;
   height: 100%;
   border-radius: 8%;
   background: #57d393;
-  -webkit-transform: translate(38%, 30%) rotate(25deg) skew(0deg, -29deg);
-          transform: translate(38%, 30%) rotate(25deg) skew(0deg, -29deg);
+  -webkit-transform: translate(40%, 30%) rotate(12deg) skew(0deg, -29deg);
+          transform: translate(40%, 30%) rotate(12deg) skew(0deg, -29deg);
 }
 
 .quick-cards {

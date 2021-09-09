@@ -187,13 +187,12 @@ a {
   position: relative;
 
   .shape1 {
-    width: 40%;
+    width: 400px;
     height: 130%;
-    transform: translate(128%, -10%) skew(-25deg, 10deg) scaleX(1.7);
+    transform: translate(58%, -9%) scaleX(1.7);
     border-top-left-radius: 20%;
-    background: $theme-x-light;
-    //  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-
+    background: #ddfcec;
+    clip-path: polygon(31% 0, 100% 0, 100% 100%, 0% 100%);
     .home-slider {
       width: 100% !important;
       height: 100% !important;
@@ -208,12 +207,12 @@ a {
   }
 
   .shape2 {
-    width: 200px;
+    width: 237px;
     height: 100%;
     overflow: hidden;
     border-top-left-radius: 7%;
-    background: $theme-dark;
-    transform: translate(-124%, 4%) skew(-25deg, 2deg);
+    background: #00984a;
+    transform: translate(-224%, 0%) skew(-14deg, 0deg);
   }
   .shape3 {
     width: 140px;
@@ -222,12 +221,13 @@ a {
     background: $theme-light;
     transform: translate(39%, 31%) skew(0deg, 2deg);
   }
+
   .shape4 {
-    width: 250px;
+    width: 242px;
     height: 100%;
     border-radius: 8%;
-    background: $theme-light;
-    transform: translate(38%, 30%) rotate(25deg) skew(0deg, -29deg);
+    background: #57d393;
+    transform: translate(40%, 30%) rotate(12deg) skew(0deg, -29deg);
   }
 }
 
