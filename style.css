@@ -6,6 +6,11 @@
 }
 
 @font-face {
+  font-family: "poppins-bold";
+  src: url("fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
   font-family: "poppins";
   src: url("fonts/Poppins/Poppins-Light.ttf");
 }
@@ -227,7 +232,9 @@ a {
 }
 
 .main-heading {
-  font-weight: bolder;
+  font-weight: 900;
+  font-size: 36px;
+  font-family: "poppins-bold";
 }
 
 .header-second-column {
@@ -726,7 +733,7 @@ a {
 
 .popular-test-section .slide-container .swiper-slide .inner-div .link:hover {
   border: 1px solid transparent;
-  background: #57d393;
+  background: #00984a;
   color: white;
 }
 
@@ -841,7 +848,7 @@ a {
 
 .truehealth-section .swiper-container .card .content-div .test-nos .icon i {
   padding: 10px 15px 10px 0;
-  font-size: 28px;
+  font-size: 26px;
   color: #57d393;
 }
 
@@ -873,6 +880,12 @@ a {
   color: #57d393;
 }
 
+.truehealth-section .swiper-container .card .content-div .age-group .icon img {
+  width: 30px;
+  height: auto;
+  padding: 5px 8px 5px 0;
+}
+
 .truehealth-section .swiper-container .card .content-div .age-group .title-box .title {
   font-weight: normal;
   font-size: 14px;
@@ -894,7 +907,7 @@ a {
 
 .truehealth-section .swiper-container .card .content-div .link:hover {
   border: 1px solid transparent;
-  background: #57d393;
+  background: #00984a;
   color: white;
 }
 
@@ -1043,6 +1056,237 @@ a {
           transform: translateX(-30%);
 }
 
+.full-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fff;
+  border: 1px solid #e6eaee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 40px;
+  padding: 20px 0 0;
+}
+
+.full-body .set-organs {
+  position: relative;
+  width: 179px;
+  height: 565px;
+}
+
+.full-body .organ-tooltip {
+  cursor: pointer;
+  position: absolute;
+  will-change: transform;
+  top: -10px;
+  left: 0;
+}
+
+.full-body .showSingle {
+  position: relative;
+}
+
+.full-body .organ-tooltip-inner {
+  background: rgba(255, 255, 255, 0.746);
+  width: 100%;
+  -webkit-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: #00984a;
+  text-transform: capitalize;
+  max-width: 165px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  text-align: left;
+}
+
+.full-body .organ-tooltip .arrow::before {
+  border-right-color: rgba(255, 255, 255, 0.746);
+}
+
+.full-body .heart-set {
+  position: absolute;
+  top: 130px;
+  left: 73px;
+  z-index: 11;
+}
+
+.full-body .heart-set .organ-tooltip {
+  left: 40px !important;
+}
+
+.full-body #details_heart {
+  position: relative;
+}
+
+.full-body #details_heart::before {
+  content: "";
+  background: url(https://metropolisindia.com/newdata/images/line.svg) no-repeat;
+  width: 100%;
+  height: 200px;
+  top: 25%;
+  left: -70%;
+  position: absolute;
+  display: none;
+}
+
+.full-body .body-part-test {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.full-body .organ img {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.full-body .organ img.clicked {
+  opacity: 1;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.full-body .organ img:hover {
+  opacity: 1;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.full-body .liver-set {
+  position: absolute;
+  top: 177.46px;
+  left: 48.49px;
+  z-index: 10;
+}
+
+.full-body .liver-set .organ-tooltip {
+  left: 65px;
+}
+
+.full-body .brain-set {
+  position: absolute;
+  top: 6px;
+  left: 66px;
+  z-index: 10;
+}
+
+.full-body .brain-set .organ-tooltip {
+  left: 50px;
+}
+
+.full-body .lungs-set {
+  position: absolute;
+  top: 100px;
+  left: 42px;
+  z-index: 10;
+}
+
+.full-body .lungs-set .organ-tooltip {
+  left: 90px !important;
+}
+
+.full-body .stomach-set {
+  position: absolute;
+  top: 184px;
+  left: 78px;
+  z-index: 10;
+}
+
+.full-body .stomach-set .organ-tooltip {
+  left: 60px !important;
+}
+
+.full-body .intestines-set {
+  position: absolute;
+  top: 215px;
+  left: 47px;
+  z-index: 10;
+}
+
+.full-body .intestines-set .organ-tooltip {
+  left: 90px !important;
+}
+
+.full-body .kidney-set {
+  position: absolute;
+  top: 215px;
+  left: 57px;
+  z-index: 10;
+}
+
+.full-body .kidney-set .organ-tooltip {
+  left: 70px !important;
+}
+
+.full-body .pancreas-set {
+  position: absolute;
+  top: 215px;
+  left: 80px;
+  z-index: 10;
+}
+
+.full-body .pancreas-set .organ-tooltip {
+  left: 30px !important;
+}
+
+.full-body .thyroid-set {
+  position: absolute;
+  top: 70px;
+  left: 77px;
+  z-index: 10;
+}
+
+.full-body .thyroid-set .organ-tooltip {
+  left: 30px !important;
+}
+
+.full-body .male_reproductive_system-set {
+  position: absolute;
+  top: 245px;
+  left: 71px;
+  z-index: 10;
+}
+
+.full-body .male_reproductive_system-set .organ-tooltip {
+  left: 40px !important;
+}
+
+.full-body .female_reproductive_system-set {
+  position: absolute;
+  top: 255px;
+  left: 61px;
+  z-index: 10;
+}
+
+.full-body .female_reproductive_system-set .organ-tooltip {
+  left: 60px !important;
+}
+
+.full-body .clicked img,
+.full-body .heart-set img {
+  opacity: 1;
+}
+
 .more-question-about {
   width: 100%;
   height: -webkit-fit-content;
@@ -1095,9 +1339,15 @@ a {
   display: none;
 }
 
+.mobile-app-section {
+  background: #ddfcec url("bg-img.jpg") no-repeat;
+  background-size: cover;
+}
+
 .video-section .swiper-video {
   overflow: hidden;
   padding: 20px;
+  position: relative;
 }
 
 .video-section .swiper-video iframe {
@@ -1106,12 +1356,136 @@ a {
   height: auto;
 }
 
+.video-section .swiper-video .video-button-next,
+.video-section .swiper-video .video-button-prev {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.video-section .swiper-video .video-button-next {
+  right: -2px;
+}
+
+.video-section .swiper-video .video-button-prev {
+  left: -2px;
+}
+
+.blogs {
+  position: relative;
+}
+
 .swiper-blogs {
   overflow: hidden;
 }
 
+.swiper-blogs .blogs-button-next,
+.swiper-blogs .blogs-button-prev {
+  position: absolute;
+  top: 55%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.swiper-blogs .blogs-button-next {
+  right: 20px;
+}
+
+.swiper-blogs .blogs-button-prev {
+  left: 20px;
+}
+
 .swiper-blogs .card {
   height: 340px;
+}
+
+.testimonials {
+  overflow: hidden;
+  position: relative;
+  background: #ddfcec;
+  padding: 30px 0 50px;
+}
+
+.testimonials .testimonial-swiper {
+  padding: 20px 0 70px;
+  overflow: hidden;
+}
+
+.testimonials .testimonial-swiper .content-card {
+  background: white;
+  padding: 10px;
+  position: relative;
+}
+
+.testimonials .testimonial-swiper .content-card .quote-sign {
+  text-align: center;
+}
+
+.testimonials .testimonial-swiper .content-card .quote-sign span {
+  font-size: 30px;
+  opacity: 0.7;
+}
+
+.testimonials .testimonial-swiper .content-card .desc {
+  font-size: 15px;
+}
+
+.testimonials .testimonial-swiper .content-card .profile {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -70px;
+}
+
+.testimonials .testimonial-swiper .content-card .profile .img {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.testimonials .testimonial-swiper .content-card .profile .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.testimonials .testimonial-swiper .content-card .profile .name {
+  font-weight: bold;
+}
+
+.testimonials .testimonial-swiper .content-card .profile .prof {
+  font-size: 15px;
+}
+
+.testimonials .testimonial-button-next,
+.testimonials .testimonial-button-prev {
+  position: absolute;
+  top: 55%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.testimonials .testimonial-button-next {
+  right: 20px;
+}
+
+.testimonials .testimonial-button-prev {
+  left: 20px;
 }
 
 .faq-section {

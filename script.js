@@ -40,12 +40,12 @@ const videoSlider = new Swiper(".swiper-video", {
     dynamicBullets: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".video-button-next",
+    prevEl: ".video-button-prev",
   },
-  autoplay: {
-    duration: 1000,
-  },
+  // autoplay: {
+  //   duration: 1000,
+  // },
 });
 const blogSlider = new Swiper(".swiper-blogs", {
   slidesPerView: 4,
@@ -58,12 +58,30 @@ const blogSlider = new Swiper(".swiper-blogs", {
     dynamicBullets: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".blogs-button-next",
+    prevEl: ".blogs-button-prev",
   },
   // autoplay: {
   //   duration: 1000,
   // },
+});
+const testimoniSlider = new Swiper(".testimonial-swiper", {
+  slidesPerView: 3,
+  spaceBetween: 45,
+  centeredSlides: false,
+  speed: 600,
+  loop: true,
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   dynamicBullets: true,
+  // },
+  navigation: {
+    nextEl: ".testimonial-button-next",
+    prevEl: ".testimonial-button-prev",
+  },
+  autoplay: {
+    delay: 1000,
+  },
 });
 
 const slider2 = new Swiper(".slider-container", {

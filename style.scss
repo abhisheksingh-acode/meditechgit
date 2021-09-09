@@ -10,6 +10,10 @@ $theme-x-light: rgb(221, 252, 236);
 $theme-white: rgb(255, 255, 255);
 
 @font-face {
+  font-family: "poppins-bold";
+  src: url("fonts/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
   font-family: "poppins";
   src: url("fonts/Poppins/Poppins-Light.ttf");
 }
@@ -170,7 +174,10 @@ a {
   }
 }
 .main-heading {
-  font-weight: bolder;
+  font-weight: 900;
+  font-size: 36px;
+  font-family: "poppins-bold";
+
   // text-align: center;
 }
 
@@ -538,7 +545,7 @@ a {
         }
         .link:hover {
           border: 1px solid transparent;
-          background: $theme-light;
+          background: $theme-dark;
           color: white;
         }
       }
@@ -629,7 +636,7 @@ a {
           .icon {
             i {
               padding: 10px 15px 10px 0;
-              font-size: 28px;
+              font-size: 26px;
               color: $theme-light;
             }
           }
@@ -657,6 +664,11 @@ a {
               font-size: 28px;
               color: $theme-light;
             }
+            img {
+              width: 30px;
+              height: auto;
+              padding: 5px 8px 5px 0;
+            }
           }
           .title-box {
             .title {
@@ -678,7 +690,7 @@ a {
         }
         .link:hover {
           border: 1px solid transparent;
-          background: $theme-light;
+          background: $theme-dark;
           color: white;
         }
       }
@@ -797,6 +809,187 @@ a {
   }
 }
 
+// human organs
+.full-body {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #e6eaee;
+  box-sizing: border-box;
+  border-radius: 40px;
+  padding: 20px 0 0;
+  .set-organs {
+    position: relative;
+    width: 179px;
+    height: 565px;
+  }
+  .organ-tooltip {
+    cursor: pointer;
+    position: absolute;
+    will-change: transform;
+    top: -10px;
+    left: 0;
+  }
+  .showSingle {
+    position: relative;
+  }
+  .organ-tooltip-inner {
+    background: rgba(255, 255, 255, 0.746);
+    width: 100%;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: #00984a;
+    text-transform: capitalize;
+    max-width: 165px;
+    height: max-content;
+    text-align: left;
+  }
+  .organ-tooltip .arrow::before {
+    border-right-color: rgba(256, 256, 256, 0.746);
+  }
+  .heart-set {
+    position: absolute;
+    top: 130px;
+    left: 73px;
+    z-index: 11;
+  }
+  .heart-set .organ-tooltip {
+    left: 40px !important;
+  }
+  #details_heart {
+    position: relative;
+  }
+  #details_heart::before {
+    content: "";
+    background: url(https://metropolisindia.com/newdata/images/line.svg)
+      no-repeat;
+    width: 100%;
+    height: 200px;
+    top: 25%;
+    left: -70%;
+    position: absolute;
+    display: none;
+  }
+  .body-part-test {
+    display: flex;
+    justify-content: space-between;
+  }
+  .organ img {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  .organ img.clicked {
+    opacity: 1;
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+  }
+  .organ img:hover {
+    opacity: 1;
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+  }
+  .liver-set {
+    position: absolute;
+    top: 177.46px;
+    left: 48.49px;
+    z-index: 10;
+  }
+  .liver-set .organ-tooltip {
+    left: 65px;
+  }
+  .brain-set {
+    position: absolute;
+    top: 6px;
+    left: 66px;
+    z-index: 10;
+  }
+  .brain-set .organ-tooltip {
+    left: 50px;
+  }
+  .lungs-set {
+    position: absolute;
+    top: 100px;
+    left: 42px;
+    z-index: 10;
+  }
+  .lungs-set .organ-tooltip {
+    left: 90px !important;
+  }
+  .stomach-set {
+    position: absolute;
+    top: 184px;
+    left: 78px;
+    z-index: 10;
+  }
+  .stomach-set .organ-tooltip {
+    left: 60px !important;
+  }
+  .intestines-set {
+    position: absolute;
+    top: 215px;
+    left: 47px;
+    z-index: 10;
+  }
+  .intestines-set .organ-tooltip {
+    left: 90px !important;
+  }
+  .kidney-set {
+    position: absolute;
+    top: 215px;
+    left: 57px;
+    z-index: 10;
+  }
+  .kidney-set .organ-tooltip {
+    left: 70px !important;
+  }
+  .pancreas-set {
+    position: absolute;
+    top: 215px;
+    left: 80px;
+    z-index: 10;
+  }
+  .pancreas-set .organ-tooltip {
+    left: 30px !important;
+  }
+  .thyroid-set {
+    position: absolute;
+    top: 70px;
+    left: 77px;
+    z-index: 10;
+  }
+  .thyroid-set .organ-tooltip {
+    left: 30px !important;
+  }
+  .male_reproductive_system-set {
+    position: absolute;
+    top: 245px;
+    left: 71px;
+    z-index: 10;
+  }
+  .male_reproductive_system-set .organ-tooltip {
+    left: 40px !important;
+  }
+  .female_reproductive_system-set {
+    position: absolute;
+    top: 255px;
+    left: 61px;
+    z-index: 10;
+  }
+  .female_reproductive_system-set .organ-tooltip {
+    left: 60px !important;
+  }
+  .clicked img,
+  .heart-set img {
+    opacity: 1;
+  }
+}
+
 .more-question-about {
   width: 100%;
   height: fit-content;
@@ -843,23 +1036,124 @@ a {
   }
 }
 
+.mobile-app-section {
+  background: $theme-x-light url("bg-img.jpg") no-repeat;
+  background-size: cover;
+}
+
 .video-section {
   .swiper-video {
     overflow: hidden;
     padding: 20px;
+    position: relative;
     iframe {
       width: 100%;
       min-height: 240px;
       height: auto;
     }
+    .video-button-next,
+    .video-button-prev {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .video-button-next {
+      right: -2px;
+    }
+    .video-button-prev {
+      left: -2px;
+    }
+  }
+}
+.blogs {
+  position: relative;
+}
+.swiper-blogs {
+  overflow: hidden;
+  .blogs-button-next,
+  .blogs-button-prev {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+  }
+  .blogs-button-next {
+    right: 20px;
+  }
+  .blogs-button-prev {
+    left: 20px;
+  }
+  .card {
+    height: 340px;
   }
 }
 
-.swiper-blogs {
+.testimonials {
   overflow: hidden;
+  position: relative;
+  background: $theme-x-light;
+  padding: 30px 0 50px;
 
-  .card {
-    height: 340px;
+  .testimonial-swiper {
+    padding: 20px 0 70px;
+    overflow: hidden;
+
+    .content-card {
+      // border: 2px solid;
+      background: white;
+      padding: 10px;
+      position: relative;
+      .quote-sign {
+        text-align: center;
+        span {
+          font-size: 30px;
+          opacity: 0.7;
+        }
+      }
+      .desc {
+        font-size: 15px;
+      }
+      .profile {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -70px;
+        .img {
+          width: 60px;
+          height: 60px;
+          overflow: hidden;
+          // border: 2px solid;
+          border-radius: 50%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .name {
+          font-weight: bold;
+        }
+        .prof {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .testimonial-button-next,
+  .testimonial-button-prev {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+  }
+  .testimonial-button-next {
+    right: 20px;
+  }
+  .testimonial-button-prev {
+    left: 20px;
   }
 }
 
