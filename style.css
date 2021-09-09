@@ -1080,9 +1080,19 @@ a {
 .full-body .organ-tooltip {
   cursor: pointer;
   position: absolute;
+  display: none;
   will-change: transform;
   top: -10px;
   left: 0;
+}
+
+.full-body .organ:hover .organ-tooltip {
+  display: block;
+}
+
+.full-body .organ:hover img {
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 .full-body .showSingle {
@@ -1285,6 +1295,45 @@ a {
 .full-body .clicked img,
 .full-body .heart-set img {
   opacity: 1;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.full-body .fe-pulse {
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .more-question-about {

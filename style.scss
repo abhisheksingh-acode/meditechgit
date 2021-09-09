@@ -826,9 +826,17 @@ a {
   .organ-tooltip {
     cursor: pointer;
     position: absolute;
+    display: none;
     will-change: transform;
     top: -10px;
     left: 0;
+  }
+  .organ:hover .organ-tooltip {
+    display: block;
+  }
+  .organ:hover img {
+    opacity: 0.9;
+    cursor: pointer;
   }
   .showSingle {
     position: relative;
@@ -987,6 +995,22 @@ a {
   .clicked img,
   .heart-set img {
     opacity: 1;
+  }
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  .fe-pulse {
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
   }
 }
 
