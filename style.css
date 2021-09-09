@@ -327,6 +327,8 @@ a {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .quick-cards .quick-card .icon {
@@ -358,6 +360,13 @@ a {
 .quick-cards .quick-card .link i {
   color: #00984a;
   padding: 2px 5px;
+}
+
+.quick-cards .quick-card:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.267);
+          box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.267);
 }
 
 .covid-test-section .fix-bg {
@@ -1355,6 +1364,8 @@ a {
   padding: 10px;
   margin: 0;
   overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .more-question-about .tabs-container .tab .title {
@@ -1379,6 +1390,8 @@ a {
   height: 100%;
   max-height: 500px;
   overflow: hidden;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 }
 
 .more-question-about .tab-container img {
@@ -1480,6 +1493,8 @@ a {
 
 .testimonials .testimonial-swiper .content-card .desc {
   font-size: 15px;
+  margin: 30px 0 40px;
+  padding: 10px 5px;
 }
 
 .testimonials .testimonial-swiper .content-card .profile {
