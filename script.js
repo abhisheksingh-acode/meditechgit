@@ -9,6 +9,7 @@ const swiper = new Swiper(".home-slider", {
   loop: true,
   autoplay: {
     duration: 1500,
+    autoplayDisableOnInteraction: false,
   },
 });
 
@@ -16,7 +17,7 @@ const slider = new Swiper(".slide-container", {
   slidesPerView: 4,
   spaceBetween: 45,
   centeredSlides: false,
-  speed: 600,
+  speed: 1000,
   loop: true,
   pagination: {
     el: ".swiper-pagination",
@@ -27,7 +28,8 @@ const slider = new Swiper(".slide-container", {
     prevEl: ".slide-button-prev",
   },
   autoplay: {
-    duration: 1000,
+    duration: 1400,
+    autoplayDisableOnInteraction: false,
   },
 });
 const videoSlider = new Swiper(".swiper-video", {
@@ -46,13 +48,14 @@ const videoSlider = new Swiper(".swiper-video", {
   },
   // autoplay: {
   //   duration: 1000,
+  autoplayDisableOnInteraction: false,
   // },
 });
 const blogSlider = new Swiper(".swiper-blogs", {
   slidesPerView: 4,
   spaceBetween: 25,
   centeredSlides: false,
-  speed: 600,
+  speed: 1000,
   loop: true,
   pagination: {
     el: ".swiper-pagination",
@@ -62,15 +65,16 @@ const blogSlider = new Swiper(".swiper-blogs", {
     nextEl: ".blogs-button-next",
     prevEl: ".blogs-button-prev",
   },
-  // autoplay: {
-  //   duration: 1000,
-  // },
+  autoplay: {
+    delay: 2000,
+    autoplayDisableOnInteraction: false,
+  },
 });
 const testimoniSlider = new Swiper(".testimonial-swiper", {
   slidesPerView: 3,
   spaceBetween: 45,
   centeredSlides: false,
-  speed: 600,
+  speed: 1300,
   loop: true,
   // pagination: {
   //   el: ".swiper-pagination",
@@ -81,14 +85,15 @@ const testimoniSlider = new Swiper(".testimonial-swiper", {
     prevEl: ".testimonial-button-prev",
   },
   autoplay: {
-    delay: 1000,
+    delay: 2500,
+    autoplayDisableOnInteraction: false,
   },
 });
 
 const slider2 = new Swiper(".slider-container", {
   slidesPerView: 4,
   spaceBetween: 30,
-  speed: 600,
+  speed: 1600,
   loop: true,
   centeredSlides: false,
   pagination: {
@@ -100,7 +105,8 @@ const slider2 = new Swiper(".slider-container", {
     prevEl: ".slider-button-prev",
   },
   autoplay: {
-    delay: 1000,
+    delay: 1500,
+    autoplayDisableOnInteraction: false,
   },
 });
 
@@ -132,5 +138,14 @@ $(document).ready(function () {
       $(".male").addClass("d-none");
       $(".female").removeClass("d-none");
     }
+  });
+});
+
+$(document).ready(function () {
+  $(".btn-click").click(function () {
+    $(this).css("animation-name", "pump");
+    setTimeout(() => {
+      $(this).css("animation-name", "");
+    }, 500);
   });
 });

@@ -293,6 +293,33 @@ a {
           transform: translate(40%, 30%) rotate(12deg) skew(0deg, -29deg);
 }
 
+.btn-click {
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+}
+
+@-webkit-keyframes pump {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pump {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .quick-cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -342,6 +369,59 @@ a {
 
 .quick-cards .quick-card .icon i {
   padding: 0;
+  z-index: 2;
+  position: relative;
+}
+
+.quick-cards .quick-card .icon::after,
+.quick-cards .quick-card .icon::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: inherit;
+  border-radius: 50%;
+  opacity: 0.2;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  display: none;
+}
+
+.quick-cards .quick-card .icon::before {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@-webkit-keyframes loop {
+  from {
+    width: 50px;
+    height: 50px;
+  }
+  to {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@keyframes loop {
+  from {
+    width: 50px;
+    height: 50px;
+  }
+  to {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 .quick-cards .quick-card .title {
@@ -357,16 +437,33 @@ a {
   color: #363535;
 }
 
+.quick-cards .quick-card .link {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
 .quick-cards .quick-card .link i {
   color: #00984a;
   padding: 2px 5px;
 }
 
 .quick-cards .quick-card:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
+  -webkit-transform: scale(1.37);
+          transform: scale(1.37);
   -webkit-box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.267);
           box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.267);
+}
+
+.quick-cards .quick-card:hover .icon::after,
+.quick-cards .quick-card:hover .icon::before {
+  -webkit-animation-name: loop;
+          animation-name: loop;
+  display: block;
+}
+
+.quick-cards .quick-card:hover .link {
+  text-decoration: underline;
+  color: #00984a;
 }
 
 .covid-test-section .fix-bg {
@@ -399,10 +496,14 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 150px;
+  width: 160px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  padding: 10px 0;
+  border-radius: 30px;
 }
 
 .covid-test-section .floats-div .icon i {
@@ -420,10 +521,8 @@ a {
           justify-content: center;
   border-radius: 50%;
   margin: 3px;
-}
-
-.covid-test-section .floats-div .icon i:hover {
-  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .covid-test-section .floats-div .title {
@@ -435,6 +534,12 @@ a {
   font-size: 14px;
   color: #424040;
   text-align: center;
+}
+
+.covid-test-section .floats-div:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 .covid-test-section .float1,
@@ -937,10 +1042,18 @@ a {
 .get-tested-section .row .link {
   font-size: 12px;
   padding: 10px 30px;
-  background: #00984a;
-  color: #fff;
+  -webkit-box-shadow: 0px 0px 10px rgba(8, 8, 8, 0.288);
+          box-shadow: 0px 0px 10px rgba(8, 8, 8, 0.288);
+  color: #00984a;
   font-weight: 500;
   border-radius: 4px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.get-tested-section .row .link:hover {
+  background: #00984a;
+  color: #fff;
 }
 
 .get-tested-section .row .circle .inner-div {
@@ -961,6 +1074,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  z-index: -1;
 }
 
 .get-tested-section .row .circle .inner-div h4 {
@@ -994,11 +1109,13 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 300px;
+  width: 320px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .get-tested-section .row .floats-div .icon i {
@@ -1071,27 +1188,43 @@ a {
           transform: translateX(-30%);
 }
 
+.body-svg .tests-container {
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 12px rgba(15, 14, 14, 0.151);
+          box-shadow: 1px 1px 12px rgba(15, 14, 14, 0.151);
+}
+
 .body-svg .tests-container img {
   width: 40px;
   height: auto;
   margin-left: 10px;
 }
 
-.body-svg .table tr {
-  border-bottom: 1px solid rgba(59, 59, 59, 0.116);
-  margin: 3px;
+.body-svg .table td {
+  padding: 18px 0;
 }
 
-.body-svg .table tr:last-child {
+.body-svg .table td img {
+  margin-right: 15px;
+}
+
+.body-svg .table td:last-child {
   border-bottom: none;
 }
 
-.body-svg .table td {
-  border: none;
+.body-svg .table tr:last-child td {
+  border-bottom: none;
 }
 
 .body-svg .table .btn {
   color: #00984a;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.body-svg .table .btn:hover {
+  color: #fff;
+  background: #00984a;
 }
 
 .female-body {
