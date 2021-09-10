@@ -194,6 +194,7 @@ a {
   -webkit-box-shadow: -1px 2px 6px rgba(128, 128, 128, 0.493);
           box-shadow: -1px 2px 6px rgba(128, 128, 128, 0.493);
   padding: 40px 30px;
+  width: 80%;
 }
 
 .landing-form .form-title {
@@ -239,12 +240,11 @@ a {
 
 .header-second-column {
   overflow: hidden;
-  background: rgba(7, 7, 7, 0);
   position: relative;
 }
 
 .header-second-column .shape1 {
-  width: 400px;
+  width: 52%;
   height: 130%;
   -webkit-transform: translate(58%, -9%) scaleX(1.7);
           transform: translate(58%, -9%) scaleX(1.7);
@@ -271,8 +271,8 @@ a {
   overflow: hidden;
   border-top-left-radius: 7%;
   background: #00984a;
-  -webkit-transform: translate(-224%, 0%) skew(-14deg, 0deg);
-          transform: translate(-224%, 0%) skew(-14deg, 0deg);
+  -webkit-transform: translate(-195%, 0%) skew(-14deg, 0deg);
+          transform: translate(-195%, 0%) skew(-14deg, 0deg);
 }
 
 .header-second-column .shape3 {
@@ -420,6 +420,10 @@ a {
           justify-content: center;
   border-radius: 50%;
   margin: 3px;
+}
+
+.covid-test-section .floats-div .icon i:hover {
+  cursor: pointer;
 }
 
 .covid-test-section .floats-div .title {
@@ -1071,6 +1075,23 @@ a {
   width: 40px;
   height: auto;
   margin-left: 10px;
+}
+
+.body-svg .table tr {
+  border-bottom: 1px solid rgba(59, 59, 59, 0.116);
+  margin: 3px;
+}
+
+.body-svg .table tr:last-child {
+  border-bottom: none;
+}
+
+.body-svg .table td {
+  border: none;
+}
+
+.body-svg .table .btn {
+  color: #00984a;
 }
 
 .female-body {
