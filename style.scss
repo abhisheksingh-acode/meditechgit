@@ -815,6 +815,22 @@ a {
 }
 
 // human organs
+.body-svg {
+  .tests-container {
+    img {
+      width: 40px;
+      height: auto;
+      margin-left: 10px;
+    }
+  }
+}
+
+.female-body {
+  max-width: none;
+  margin-left: -31px !important;
+  height: 565px !important;
+}
+
 .full-body {
   display: flex;
   justify-content: center;
@@ -828,6 +844,7 @@ a {
     width: 179px;
     height: 565px;
   }
+
   .organ-tooltip {
     cursor: pointer;
     position: absolute;
@@ -988,6 +1005,7 @@ a {
   .male_reproductive_system-set .organ-tooltip {
     left: 40px !important;
   }
+
   .female_reproductive_system-set {
     position: absolute;
     top: 255px;

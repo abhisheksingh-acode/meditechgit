@@ -210,9 +210,9 @@
    <section class="covid-test-section">
       <div class="fix-bg">
          <div class="container mx-auto">
-            <h2 class="heading main-heading" data-aos="fade-up" data-aos-delay="60" data-aos-offset="250"
+            <h2 class="heading main-heading" data-aos="fade-up" data-aos-delay="60" data-aos-offset="160"
                data-aos-duration="1000" data-aos-easing="ease" data-aos-once="true">Covid Test</h2>
-            <p class="para" data-aos="fade-up" data-aos-delay="100" data-aos-offset="200" data-aos-duration="1000"
+            <p class="para" data-aos="fade-up" data-aos-delay="100" data-aos-offset="180" data-aos-duration="1000"
                data-aos-easing="ease" data-aos-once="true">
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi culpa et ipsum maxime eius, nihil vero
                excepturi vel delectus similique nulla, animi saepe explicabo quo incidunt eligendi enim eveniet. Fugiat.
@@ -267,9 +267,9 @@
       </div>
       <!-- row end  -->
       <div class="col-12 book-card-container">
-         <div class="shadow-container">
-            <div class="book-card" data-aos="fade-up" data-aos-delay="50" data-aos-offset="200" data-aos-duration="1000"
-               data-aos-easing="ease" data-aos-once="true">
+         <div class="shadow-container" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease"
+            data-aos-offset="180" data-aos-once="true">
+            <div class="book-card">
                <div class="card-item ">
                   <div class="top">
                      <span class="nos">1</span>
@@ -280,8 +280,7 @@
                   </div>
                </div>
             </div>
-            <div class="book-card" data-aos="fade-up" data-aos-delay="70" data-aos-offset="200" data-aos-duration="1000"
-               data-aos-easing="ease" data-aos-once="true">
+            <div class="book-card">
                <div class="card-item ">
                   <div class="top">
                      <span class="nos">2</span>
@@ -292,8 +291,7 @@
                   </div>
                </div>
             </div>
-            <div class="book-card" data-aos="fade-up" data-aos-delay="100" data-aos-offset="200"
-               data-aos-duration="1000" data-aos-easing="ease" data-aos-once="true">
+            <div class="book-card">
                <div class="card-item ">
                   <div class="top">
                      <span class="nos">3</span>
@@ -304,8 +302,7 @@
                   </div>
                </div>
             </div>
-            <div class="book-card" data-aos="fade-up" data-aos-delay="130" data-aos-offset="200"
-               data-aos-duration="1000" data-aos-easing="ease" data-aos-once="true">
+            <div class="book-card">
                <div class="card-item ">
                   <div class="top">
                      <span class="nos">4</span>
@@ -326,7 +323,7 @@
    <section class="popular-test-section ">
 
       <div class="w-75 mx-auto">
-         <h3 class="text-center main-heading" data-aos="fade-up" data-aos-delay="60" data-aos-offset="250"
+         <h3 class="text-center main-heading" data-aos="fade-up" data-aos-delay="60" data-aos-offset="180"
             data-aos-duration="1000" data-aos-easing="ease" data-aos-once="true">Popular Test</h3>
          <p class="text-center text-muted" data-aos="fade-up" data-aos-delay="100" data-aos-offset="200"
             data-aos-duration="1000" data-aos-easing="ease" data-aos-once="true">Browse through our most popular tests
@@ -737,10 +734,21 @@
 
 
    <!-- human body svg  -->
-   <section class="mx-auto body-svg">
+   <section class="mx-auto body-svg bg-light py-5">
       <h2 class="main-heading text-center" data-aos="fade-up" data-aos-delay="60" data-aos-offset="200"
          data-aos-duration="1000" data-aos-easing="ease" data-aos-once="true">Facing Health Issue? Let us help</h2>
-
+      <div class="pt-3 d-flex justify-content-center align-items-center">
+         <select name="gender" id="" class="gender form-select mx-1 rounded-pill w-25">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+         </select>
+         <select name="age" id="ageGroup" class="form-select mx-1 rounded-pill ageGroup w-25">
+            <option value="25">Below 25 Years</option>
+            <option value="35">25-35 Years</option>
+            <option value="40">35-50 Years</option>
+            <option value="50">Above 50 Years</option>
+         </select>
+      </div>
       <div class="row container-md mx-auto my-5">
          <div class="col-md-5 full-body">
             <div class="set-organs">
@@ -845,7 +853,7 @@
                      </div>
                   </a>
                </div>
-               <div class="male_reproductive_system-set organ">
+               <div class="male_reproductive_system-set organ male">
                   <a id="male_reproductive_system-set" class="showSingle" target="male_reproductive_system">
                      <img data-src="https://metropolisindia.com/newdata/images/male_reproductive_system-inactive.svg"
                         id="male_reproductive_system" alt="" class="img-fluid organ-images lazyloaded"
@@ -856,17 +864,62 @@
                      </div>
                   </a>
                </div>
-               <div class="female_reproductive_system-set organ d-none">
+               <div class="female_reproductive_system-set organ female">
                   <a id="female_reproductive_system-set" class="showSingle" target="female_reproductive_system">
                      <img data-src="https://metropolisindia.com/newdata/images/female_reproductive_system-inactive.svg"
                         id="female_reproductive_system" alt="" class="img-fluid organ-images lazyloaded"
                         src="https://metropolisindia.com/newdata/images/female_reproductive_system-inactive.svg">
-                     <div class="organ-tooltip display-none">
+                     <div class="organ-tooltip ">
                         <div class="arrow" style="top: 13px;"></div>
                         <div class="organ-tooltip-inner">female reproductive system</div>
                      </div>
                   </a>
                </div>
+            </div>
+         </div>
+         <div class="col-md-1"></div>
+         <div class="col-md-6">
+            <div class="tests-container bg-white p-4">
+               <div class="test-title pb-4 fw-bold text-theme-dark">Suggested tests for <span class="area">Heart</span>
+               </div>
+
+               <table class="table">
+                  <tr class="d-flex justify-content-between align-items-center heart">
+                     <!-- <td class="icon"><img src="image/icons8-covid-19-64.png" alt=""></td> -->
+                     <td class="test-name text-left"> <img src="image/icons8-covid-19-64.png" alt=""> Homocysteine Test
+                        Heart1
+                     </td>
+                     <td><a href="" class="btn border border-success ">Add</a></td>
+                  </tr>
+                  <tr class="d-flex justify-content-between align-items-center kidney">
+                     <!-- <td class="icon"><img src="image/icons8-covid-19-64.png" alt=""></td> -->
+                     <td class="test-name text-left"> <img src="image/icons8-covid-19-64.png" alt=""> Homocysteine Test
+                        kidney
+                     </td>
+                     <td><a href="" class="btn border border-success ">Add</a></td>
+                  </tr>
+                  <tr class="d-flex justify-content-between align-items-center liver">
+                     <!-- <td class="icon"><img src="image/icons8-covid-19-64.png" alt=""></td> -->
+                     <td class="test-name text-left"> <img src="image/icons8-covid-19-64.png" alt=""> Homocysteine Test
+                        liver
+                     </td>
+                     <td><a href="" class="btn border border-success ">Add</a></td>
+                  </tr>
+                  <tr class="d-flex justify-content-between align-items-center lungs">
+                     <!-- <td class="icon"><img src="image/icons8-covid-19-64.png" alt=""></td> -->
+                     <td class="test-name text-left"> <img src="image/icons8-covid-19-64.png" alt=""> Homocysteine Test
+                        lungs
+                     </td>
+                     <td><a href="" class="btn border border-success ">Add</a></td>
+                  </tr>
+                  <tr class="d-flex justify-content-between align-items-center pancreas">
+                     <!-- <td class="icon"><img src="image/icons8-covid-19-64.png" alt=""></td> -->
+                     <td class="test-name text-left"> <img src="image/icons8-covid-19-64.png" alt=""> Homocysteine Test
+                        pancreas
+                     </td>
+                     <td><a href="" class="btn border border-success ">Add</a></td>
+                  </tr>
+               </table>
             </div>
          </div>
       </div>
@@ -877,8 +930,8 @@
 
    <section class="mx-auto mobile-app-section py-5">
       <div class="row mx-auto">
-         <div class="col-7 d-flex align-items-center justify-content-center" data-aos="flip-up" data-aos-delay="60"
-            data-aos-offset="220" data-aos-duration="1200" data-aos-easing="ease" data-aos-once="true">
+         <div class="col-7 d-flex align-items-center justify-content-center" data-aos="flip-up" data-aos-offset="180"
+            data-aos-duration="1400" data-aos-easing="ease" data-aos-once="true">
             <!-- <div class="img-container"> -->
             <img src="image/mobile-app-removebg-preview.png" alt="" height="500px" width="auto">
             <!-- </div> -->
@@ -916,7 +969,8 @@
    <!-- answer to more questions section  -->
    <section class="more-question-about mx-auto ">
       <div class="row container p-0 mx-auto justify-content-center">
-         <div class="col-md-4 p-0">
+         <div class="col-md-4 p-0" data-aos="fade-right" data-aos-offset="180" data-aos-duration="1000"
+            data-aos-easing="ease" data-aos-once="true">
             <h4 class="main-heading">Why Meditech Diagnostic:</h4>
             <p class="">
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dicta culpa excepturi a voluptatem beatae
@@ -946,7 +1000,8 @@
                </div>
             </div>
          </div>
-         <div class="col-md-5  rounded-3">
+         <div class="col-md-5 rounded-3" data-aos="fade-left" data-aos-offset="180" data-aos-duration="1000"
+            data-aos-easing="ease" data-aos-once="true">
             <div class="tab-container active">
                <img src="image/screenshot-www.google.com-2021.09.07-23_09_03.png" alt="">
             </div>
@@ -968,7 +1023,8 @@
 
    <!-- video section  -->
    <section class="mx-auto py-5 video-section">
-      <h2 class="main-heading text-center">Meditech Videos</h2>
+      <h2 class="main-heading text-center" data-aos="fade-up" data-aos-offset="180" data-aos-duration="1000"
+         data-aos-easing="ease" data-aos-once="true">Meditech Videos</h2>
 
       <div class="swiper-container swiper-video container mx-auto ">
          <div class="swiper-wrapper">
@@ -1007,9 +1063,11 @@
 
    <!-- testimonials  -->
    <section class="mx-auto testimonials my-5">
-      <h2 class="main-heading text-center">Our Client Testimonials</h2>
+      <h2 class="main-heading text-center" data-aos="fade-up" data-aos-offset="180" data-aos-duration="1000"
+         data-aos-easing="ease" data-aos-once="true">Our Client Testimonials</h2>
 
-      <div class="testimonial-swiper container-md mx-auto">
+      <div class="testimonial-swiper container-md mx-auto" data-aos="fade-up" data-aos-offset="180"
+         data-aos-duration="1000" data-aos-easing="ease" data-aos-once="true">
          <div class="swiper-wrapper">
             <div class="swiper-slide">
                <div class="content-card">
@@ -1099,8 +1157,10 @@
    <!-- blogs article  -->
 
    <section class="mx-auto blogs">
-      <h2 class="text-center main-heading">Latest Article Blogs</h2>
-      <div class="swiper-blogs container mx-auto py-4">
+      <h2 class="text-center main-heading" data-aos="fade-up" data-aos-offset="180" data-aos-duration="1000"
+         data-aos-easing="ease" data-aos-once="true">Latest Article Blogs</h2>
+      <div class="swiper-blogs container mx-auto py-4" data-aos="fade-up" data-aos-offset="180" data-aos-duration="1000"
+         data-aos-easing="ease" data-aos-once="true">
          <div class="swiper-wrapper">
             <div class="swiper-slide">
                <div class="card" style="">
@@ -1174,13 +1234,16 @@
    <!-- faqs  -->
    <section class="faq-section ">
       <div class="w-75 mx-auto mb-5">
-         <h3 class="text-center main-heading">Q&As on Covid-19 and related health topics</h3>
-         <p class="text-center text-muted w-75 mx-auto">
+         <h3 class="text-center main-heading" data-aos="fade-up" data-aos-offset="180" data-aos-duration="1000"
+            data-aos-easing="ease" data-aos-once="true">Q&As on Covid-19 and related health topics</h3>
+         <p class="text-center text-muted w-75 mx-auto" data-aos="fade-up" data-aos-offset="180"
+            data-aos-duration="1000" data-aos-easing="ease" data-aos-once="true">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magni quos, eaque officia eum iusto ipsum!
          </p>
       </div>
 
-      <div class="accordion-container w-75 mx-auto">
+      <div class="accordion-container w-75 mx-auto" data-aos="fade-up" data-aos-offset="180" data-aos-duration="1000"
+         data-aos-easing="ease" data-aos-once="true">
          <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                <h2 class="accordion-header" id="headingOne">

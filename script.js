@@ -115,3 +115,22 @@ $(document).ready(function () {
     $(".tab-container").eq(active).addClass("active");
   });
 });
+
+$(document).ready(function () {
+  let img1 = "https://metropolisindia.com/newdata/images/body.svg";
+  let img2 = "https://metropolisindia.com/newdata/images/femalebody.svg";
+
+  $(".gender").change(function () {
+    if ($(this).val() == "male") {
+      $("#body-image").attr("src", img1);
+      $("#body-image").removeClass("female-body");
+      $(".female").addClass("d-none");
+      $(".male").removeClass("d-none");
+    } else {
+      $("#body-image").attr("src", img2);
+      $("#body-image").addClass("female-body");
+      $(".male").addClass("d-none");
+      $(".female").removeClass("d-none");
+    }
+  });
+});
